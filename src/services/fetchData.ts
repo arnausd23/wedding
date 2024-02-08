@@ -1,7 +1,5 @@
-export const fetchTimeline = async () => {
+export const fetchData = async (url: string) => {
   const notionAPIKey = "secret_u57TwLDeX18bsX6GUjfGyEPo1CQFTWkwQoo7iEqZS9I";
-  const databaseId = "a11f2e9245d44dbfb105002345be8b81";
-  const url = `https://api.notion.com/v1/databases/${databaseId}/query`;
   const proxyUrl = "https://corsproxy.io";
 
   const headers = {
@@ -26,4 +24,4 @@ export const fetchTimeline = async () => {
   }
 };
 
-export default fetchTimeline;
+export default fetchData;

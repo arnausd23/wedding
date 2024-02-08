@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import fetchTimeline from "../services/fetchData";
+import fetchTimeline from "../services/fetchTimeline";
 
 export interface Timeline {
   schedule: string;
