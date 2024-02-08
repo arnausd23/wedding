@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import leaf from "../assets/b-leaf.png";
+import rings from "../assets/rings.png";
 import fetchWeddingDate from "../services/fetchWeddingDate";
 
 function Timer() {
@@ -30,7 +31,12 @@ function Timer() {
   }, []);
 
   return (
-    <section className="bg-secondary p-10 lg:py-20">
+    <section className="bg-secondary py-10 px-5 lg:py-20">
+      <div className="lg:hidden flex items-baseline justify-center gap-4 mb-8">
+        <img className="w-16 -scale-y-100" src={leaf} alt="Decoration leaf" />
+        <img className="w-14" src={rings} alt="Decoration rings" />
+        <img className="w-16 rotate-180" src={leaf} alt="Decoration leaf" />
+      </div>
       {date && (
         <div className="relative grid grid-cols-4 items-center justify-center max-w-2xl my-0 mx-auto">
           <div className="text-center">
@@ -50,12 +56,12 @@ function Timer() {
             <p className="text-5xl">{date.seconds}</p>
           </div>
           <img
-            className="absolute w-16 -top-6 -left-14 -scale-y-100"
+            className="absolute hidden lg:block w-16 -top-6 -left-14 -scale-y-100"
             src={leaf}
             alt="Decoration leaf"
           />
           <img
-            className="absolute w-16 -top-6 -right-14 rotate-180"
+            className="absolute hidden lg:block w-16 -top-6 -right-14 rotate-180"
             src={leaf}
             alt="Decoration leaf"
           />
