@@ -6,6 +6,7 @@ import "./services/fetchData";
 import Timeline from "./sections/Timeline";
 import Timer from "./sections/Timer";
 import fetchHome from "./services/fetchHome";
+import Information from "./sections/Information";
 
 function App() {
   const [image, setImage] = useState([]);
@@ -17,7 +18,7 @@ function App() {
       const timeline = response.results.map((event: any) => {
         const { image } = event.properties;
         return {
-          image: image.files[0].external.url,
+          image: image.files[0].file.url,
         };
       });
       setImage(timeline[0].image);
@@ -35,6 +36,7 @@ function App() {
       <JoinUs />
       <Timeline />
       <Timer />
+      <Information />
     </main>
   );
 }
