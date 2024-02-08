@@ -9,7 +9,10 @@ export default {
       colors: {
         primary: '#a5883c',
         secondary: '#f5f5f3',
-      }
+      },
+      fontFamily: {
+        coconat: ["Coconat", "serif"],
+      },
     },
   },
   plugins: [],

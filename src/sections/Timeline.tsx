@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import preparation from "../assets/preparation.jpg";
 import fetchTimeline from "../services/fetchData";
 
 export interface Timeline {
@@ -32,22 +31,21 @@ function Timeline() {
   }, []);
 
   return (
-    <section className="flex flex-col lg:w-[70%] my-0 mx-auto">
-      {/* <section className="grid grid-cols-2 lg:w-[70%] my-0 mx-auto"> */}
+    <section className="flex flex-col lg:w-[70%] my-0 mx-auto p-12">
       {timeline.map((event: Timeline, index: number) => {
         const { description, image, schedule, title } = event;
 
         return (
-          <div className="grid grid-cols-3 items-center justify-items-center">
-            <img
-              src={image}
-              alt={`${title} wedding`}
+          <div className="flex flex-col mb-14 lg:mb-0 lg:grid lg:grid-cols-3 items-center justify-items-center">
+            <div
+              style={{ backgroundImage: `url(${image})` }}
               className={
-                "w-32 h-32 rounded-full " + (index % 2 == 0 ? "" : " order-3")
+                "w-60 h-60 rounded-full bg-cover bg-center" +
+                (index % 2 == 0 ? "" : " lg:order-3")
               }
             />
-            <div className="border-l-2 border-dashed border-primary my-0 mx-auto h-full relative after:content-[''] after:bg-primary after:rounded-full after:h-3 after:w-3 after:absolute after:-left-[0.438rem]"></div>
-            <div className={index % 2 == 0 ? "" : "-order-1"}>
+            <div className="hidden lg:block border-l-2 border-dashed border-primary my-0 mx-auto h-full relative after:content-[''] after:bg-primary after:rounded-full after:h-3 after:w-3 after:absolute after:-left-[0.438rem]"></div>
+            <div className={index % 2 == 0 ? "" : " lg:-order-1"}>
               <p className="text-primary italic">{schedule}</p>
               <h3 className="font-bold">{title}</h3>
               <p>{description}</p>
@@ -55,23 +53,6 @@ function Timeline() {
           </div>
         );
       })}
-
-      {/* <div>
-        <p className="text-primary italic">3pm - 5pm</p>
-        <h3 className="font-bold">Preparation</h3>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, dolor.
-          Quae nesciunt consequuntur ipsa quasi distinctio debitis eum illum,
-          fuga, qui sed in obcaecati.
-        </p>
-      </div>
-      <div className="border-l-2 border-dashed border-primary pl-8 mt-[2px]">
-        <img
-          src={preparation}
-          alt="Preparation wedding"
-          className="w-32 h-32 rounded-full justify-self-end mr-8"
-        />
-      </div> */}
     </section>
   );
 }
