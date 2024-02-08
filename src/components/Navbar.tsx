@@ -7,9 +7,12 @@ import OpenIcon from "./Icons/OpenIcon";
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = [
-    { href: "#joinUs", label: "Join Us" },
+    { href: "#join-us", label: "Join Us" },
     { href: "#timeline", label: "Timeline" },
-    { href: "#menu", label: "Menu" },
+    { href: "#timer", label: "Timer" },
+    { href: "#information", label: "Information" },
+    { href: "#gallery", label: "Gallery" },
+    { href: "#contact", label: "Contact" },
   ];
 
   return (

@@ -28,3 +28,9 @@
   font-family: "Coconat", sans-serif;
   font-weight: normal;
 }
+
+@layer utilities {
+  .center-absolute {
+    transform: translate(-50%, -50%);
+  }
+}

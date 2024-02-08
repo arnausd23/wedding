@@ -4,7 +4,7 @@ import InformationColumn from "../components/InformationColumn";
 
 function Information() {
   return (
-    <section className="p-10">
+    <section id="information" className="p-10">
       <div
         className="w-full h-40 lg:h-96 bg-cover bg-center"
         style={{ backgroundImage: `url(${information})` }}

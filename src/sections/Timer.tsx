@@ -31,7 +31,7 @@ function Timer() {
   }, []);
 
   return (
-    <section className="bg-secondary py-10 px-5 lg:py-20">
+    <section id="timer" className="bg-secondary py-10 px-5 lg:py-20">
       <div className="lg:hidden flex items-baseline justify-center gap-4 mb-8">
         <img className="w-16 -scale-y-100" src={leaf} alt="Decoration leaf" />
         <img className="w-14" src={rings} alt="Decoration rings" />

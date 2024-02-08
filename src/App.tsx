@@ -7,6 +7,8 @@ import Timeline from "./sections/Timeline";
 import Timer from "./sections/Timer";
 import fetchHome from "./services/fetchHome";
 import Information from "./sections/Information";
+import Gallery from "./sections/Gallery";
+import Contact from "./sections/Contact";
 
 function App() {
   const [image, setImage] = useState([]);
@@ -37,6 +39,8 @@ function App() {
       <Timeline />
       <Timer />
       <Information />
+      <Contact />
+      <Gallery />
     </main>
   );
 }

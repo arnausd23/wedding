@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 function InformationColumn() {
   return (
@@ -11,9 +12,7 @@ function InformationColumn() {
         consequatur. Eius, doloremque nisi saepe libero perferendis incidunt
         vero ut architecto totam.
       </p>
-      <button className="bg-green text-white py-5 px-12 font-bold my-8 lg:mt-14 lg:mb-0">
-        Read more
-      </button>
+      <Button className="my-8 lg:mt-14 lg:mb-0" text="Read More" link="" />
     </div>
   );
 }

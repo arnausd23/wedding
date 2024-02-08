@@ -31,7 +31,10 @@ function Timeline() {
   }, []);
 
   return (
-    <section className="flex flex-col lg:w-[70%] my-0 mx-auto p-12">
+    <section
+      id="timeline"
+      className="flex flex-col lg:w-[70%] my-0 mx-auto p-12"
+    >
       {timeline.map((event: Timeline, index: number) => {
         const { description, image, schedule, title } = event;
 
