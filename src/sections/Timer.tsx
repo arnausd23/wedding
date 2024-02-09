@@ -5,6 +5,7 @@ import fetchWeddingDate from "../services/fetchWeddingDate";
 
 function Timer() {
   const [date, setDate] = useState(null);
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,17 +19,39 @@ function Timer() {
       });
 
       const formattedDate = new Date(date[0].date);
-      const parsedDate = {
-        days: formattedDate.getDay(),
-        hours: formattedDate.getHours(),
-        minutes: formattedDate.getMinutes(),
-        seconds: formattedDate.getSeconds(),
-      };
-
-      setDate(parsedDate);
+      setDate(formattedDate);
     };
+
     fetchData().catch(console.error);
   }, []);
+
+  useEffect(() => {
+    if (!date) return;
+
+    const timer = setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  });
+
+  function calculateTimeLeft() {
+    const targetDate = new Date(date);
+    const difference = targetDate - new Date();
+
+    let timeLeft = {};
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+
+    return timeLeft;
+  }
 
   return (
     <section id="timer" className="bg-secondary py-10 px-5 lg:py-20">
@@ -37,31 +60,31 @@ function Timer() {
         <img className="w-14" src={rings} alt="Decoration rings" />
         <img className="w-16 rotate-180" src={leaf} alt="Decoration leaf" />
       </div>
-      {date && (
+      {timeLeft && (
         <div className="relative grid grid-cols-4 items-center justify-center max-w-2xl my-0 mx-auto">
           <div className="text-center">
             <span className="text-primary mb-4 inline-block lg:text-xl">
               Days
             </span>
-            <p className="text-5xl">{date.days}</p>
+            <p className="text-4xl lg:text-5xl">{timeLeft.days}</p>
           </div>
           <div className="text-center">
             <span className="text-primary mb-4 inline-block lg:text-xl">
               Hours
             </span>
-            <p className="text-5xl">{date.hours}</p>
+            <p className="text-4xl lg:text-5xl">{timeLeft.hours}</p>
           </div>
           <div className="text-center">
             <span className="text-primary mb-4 inline-block lg:text-xl">
               Minutes
             </span>
-            <p className="text-5xl">{date.minutes}</p>
+            <p className="text-4xl lg:text-5xl">{timeLeft.minutes}</p>
           </div>
           <div className="text-center">
             <span className="text-primary mb-4 inline-block lg:text-xl">
               Seconds
             </span>
-            <p className="text-5xl">{date.seconds}</p>
+            <p className="text-4xl lg:text-5xl">{timeLeft.seconds}</p>
           </div>
           <img
             className="absolute hidden lg:block w-16 -top-6 -left-14 -scale-y-100"

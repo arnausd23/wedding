@@ -1,4 +1,4 @@
-export const fetchData = async (url: string) => {
+export const fetchData = async (url: string, body?: any = {}) => {
   const notionAPIKey = "secret_u57TwLDeX18bsX6GUjfGyEPo1CQFTWkwQoo7iEqZS9I";
   const proxyUrl = "https://corsproxy.io";
 
@@ -7,10 +7,8 @@ export const fetchData = async (url: string) => {
     "Notion-Version": "2021-08-16",
     "Content-Type": "application/json",
   };
-
+  console.log(url, body);
   try {
-    const body = {};
-
     const response = await fetch(`${proxyUrl}?${url}`, {
       method: "POST",
       headers: headers,
@@ -19,7 +17,7 @@ export const fetchData = async (url: string) => {
 
     return response.json();
   } catch (error) {
-    console.error("Error fetching Timeline:", error);
+    console.error("Error fetching:", error);
     throw error;
   }
 };
