@@ -17,7 +17,7 @@ function Navbar() {
 
   return (
     <>
-      <header className="sm:px-8 px-4 py-2 z-10 w-full">
+      <header className="sm:px-8 px-4 py-2 z-10 w-full lg:fixed lg:bg-white lg:z-30 lg:top-0">
         <nav className="max-lg:flex justify-between items-center max-container">
           <ul className="flex lg:grid grid-cols-7 justify-center items-center gap-16">
             <a

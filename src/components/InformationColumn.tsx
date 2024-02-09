@@ -1,17 +1,18 @@
 import React from "react";
 import Button from "./Button";
 
-function InformationColumn() {
+interface InformationColumnProps {
+  number: number;
+  title: string;
+  text: string;
+}
+
+function InformationColumn({ number, title, text }: InformationColumnProps) {
   return (
     <div className="text-center">
-      <span className="text-primary text-2xl">01</span>
-      <h3 className="uppercase font-bold mt-1 lg:mt-2 text-3xl">Location</h3>
-      <p className="mt-4 lg:mt-6">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci sed
-        aliquam atque dolorem eligendi voluptate repudiandae sit asperiores
-        consequatur. Eius, doloremque nisi saepe libero perferendis incidunt
-        vero ut architecto totam.
-      </p>
+      <span className="text-primary text-2xl">{number}</span>
+      <h3 className="uppercase font-bold mt-1 lg:mt-2 text-3xl">{title}</h3>
+      <p className="mt-4 lg:mt-6">{text}</p>
       <Button className="my-8 lg:mt-14 lg:mb-0" text="Read More" link="" />
     </div>
   );

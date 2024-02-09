@@ -14,16 +14,18 @@ function Timeline() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetchTimeline();
-      const timeline = response.results.map((event: Timeline[]) => {
-        const { description, image, schedule, title } = event.properties;
-        return {
-          schedule: schedule.rich_text[0].plain_text,
-          title: title.rich_text[0].plain_text,
-          description: description.rich_text[0].plain_text,
-          image: image.files[0].file.url,
-        };
-      });
-
+      const timeline = response.results
+        .toReversed()
+        .map((event: Timeline[]) => {
+          const { description, image, schedule, title } = event.properties;
+          return {
+            schedule: schedule.rich_text[0].plain_text,
+            title: title.rich_text[0].plain_text,
+            description: description.rich_text[0].plain_text,
+            image: image.files[0].file.url,
+          };
+        });
+      console.log(timeline);
       setTimeline(timeline);
     };
 
