@@ -3,30 +3,39 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Coconat";
-  src: url("./assets/coconat/Coconat-Regular.woff2");
-  font-weight: 400;
-  font-style: normal;
+  font-family: "serif";
+  src: url(./assets/DIL-Serif-Regular.woff2);
 }
+
 @font-face {
-  font-family: "Coconat";
-  src: url("./assets/coconat/Coconat-Bold.woff2");
-  font-weight: 700;
+  font-family: "serif";
+  src: url(./assets/ppeiko-medium.otf);
+  font-weight: bold;
 }
+
 @font-face {
-  font-family: "Coconat";
-  src: url("./assets/coconat/Coconat-Demi.woff2");
-  font-weight: 600;
+  font-family: "sans";
+  src: url(./assets/sans.woff);
 }
+
 /* @font-face {
-  font-family: "Coconat";
-  src: url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap");
+  font-family: "sans";
+  src: url(https://static1.squarespace.com/static/51762854e4b0c6cbe9552100/t/62ac0ecb72c4b9519991bb01/1655443147233/PPEiko-RegularItalic.woff2);
   font-style: italic;
 } */
 
-* {
-  font-family: "Coconat", sans-serif;
-  font-weight: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  font-family: "serif", sans-serif;
+}
+
+p {
+  font-family: "sans", sans-serif;
 }
 
 @layer utilities {

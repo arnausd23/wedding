@@ -57,7 +57,7 @@ function Timeline() {
             ></div>
             <div className={index % 2 == 0 ? "" : " lg:-order-1"}>
               <p className="text-primary italic">{schedule}</p>
-              <h3 className="font-bold">{title}</h3>
+              <h3 className="font-bold text-2xl my-2 lg:my-4">{title}</h3>
               <p>{description}</p>
             </div>
           </div>

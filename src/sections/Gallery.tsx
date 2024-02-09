@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../components/Button";
+import googleDriveIcon from "../assets/google-drive.png";
 
 function Gallery() {
   return (
@@ -35,7 +36,17 @@ function Gallery() {
             Don't forget to take a lot of pictures during the ceremony and share
             them all into this link!
           </h2>
-          <Button className="mt-8" text="Add your photos" link="" />
+          <Button
+            className="mt-8 lg:mt-12 px-5 lg:px-12"
+            text="Add your photos"
+            link=""
+          >
+            <img
+              className="w-8 inline mr-4"
+              src={googleDriveIcon}
+              alt="Google Drive icon"
+            />
+          </Button>
         </div>
       </section>
     </section>

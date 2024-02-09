@@ -5,9 +5,10 @@ interface ButtonProps {
   link: string;
   className?: string;
   onClick?: () => void;
+  children: any;
 }
 
-function Button({ text, link, className, onClick }: ButtonProps) {
+function Button({ text, link, className, onClick, children }: ButtonProps) {
   return (
     <a
       target="_blank"
@@ -18,6 +19,7 @@ function Button({ text, link, className, onClick }: ButtonProps) {
       }
       onClick={onClick}
     >
+      {children}
       {text}
     </a>
   );

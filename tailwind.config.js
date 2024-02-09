@@ -12,7 +12,8 @@ export default {
         green: '#8ab0b1',
       },
       fontFamily: {
-        coconat: ["Coconat", "serif"],
+        serif: ["serif-regular", "serif"],
+        futura: ["futura", "serif"],
       },
     },
   },

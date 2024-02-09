@@ -40,19 +40,27 @@ function Timer() {
       {date && (
         <div className="relative grid grid-cols-4 items-center justify-center max-w-2xl my-0 mx-auto">
           <div className="text-center">
-            <p className="text-primary mb-4">Days</p>
+            <span className="text-primary mb-4 inline-block lg:text-xl">
+              Days
+            </span>
             <p className="text-5xl">{date.days}</p>
           </div>
           <div className="text-center">
-            <p className="text-primary mb-4">Hours</p>
+            <span className="text-primary mb-4 inline-block lg:text-xl">
+              Hours
+            </span>
             <p className="text-5xl">{date.hours}</p>
           </div>
           <div className="text-center">
-            <p className="text-primary mb-4">Minutes</p>
+            <span className="text-primary mb-4 inline-block lg:text-xl">
+              Minutes
+            </span>
             <p className="text-5xl">{date.minutes}</p>
           </div>
           <div className="text-center">
-            <p className="text-primary mb-4">Seconds</p>
+            <span className="text-primary mb-4 inline-block lg:text-xl">
+              Seconds
+            </span>
             <p className="text-5xl">{date.seconds}</p>
           </div>
           <img

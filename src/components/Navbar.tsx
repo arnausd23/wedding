@@ -27,7 +27,7 @@ function Navbar() {
               <li key={item.label}>
                 <a
                   href={item.href}
-                  className="font-montserrat leading-normal text-lg hover:underline hover:underline-offset-2 hover:font-bold"
+                  className="font-montserrat leading-normal text-lg hover:underline hover:underline-offset-4"
                 >
                   {item.label}
                 </a>

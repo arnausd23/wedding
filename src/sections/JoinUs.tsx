@@ -10,11 +10,11 @@ function JoinUs() {
     >
       <h3>
         Invite you
-        <span className="text-primary italic text-xl lg:text-2xl block my-4 lg:my-8 normal-case">
+        <span className="text-primary italic text-xl lg:text-2xl block my-2 lg:my-6 normal-case font-bold">
           to
         </span>
         join the celebration
-        <span className="text-primary italic text-xl lg:text-2xl block my-4 lg:my-8 normal-case">
+        <span className="text-primary italic text-xl lg:text-2xl block my-2 lg:my-6 normal-case font-bold">
           of
         </span>
         their marriage
@@ -22,7 +22,7 @@ function JoinUs() {
           <FlowerIcon className="w-10 fill-primary" />
           <FlowerIcon className="w-10 fill-primary [transform:rotateY(180deg)]" />
         </div>
-        <p>18th July 2022</p>
+        <span className="font-bold">18th July 2022</span>
       </h3>
       <img
         className="w-16 mt-14 mb-0 mx-auto "
