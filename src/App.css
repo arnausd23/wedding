@@ -18,11 +18,9 @@
   src: url(./assets/sans.woff);
 }
 
-/* @font-face {
-  font-family: "sans";
-  src: url(https://static1.squarespace.com/static/51762854e4b0c6cbe9552100/t/62ac0ecb72c4b9519991bb01/1655443147233/PPEiko-RegularItalic.woff2);
-  font-style: italic;
-} */
+body {
+  background-color: white;
+}
 
 h1,
 h2,
