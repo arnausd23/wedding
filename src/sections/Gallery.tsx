@@ -1,6 +1,5 @@
-import React from "react";
-import Button from "../components/Button";
 import googleDriveIcon from "../assets/google-drive.png";
+import Button from "../components/Button";
 
 function Gallery() {
   return (

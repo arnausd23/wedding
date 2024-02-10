@@ -3,7 +3,7 @@ import fetchData from "./fetchData";
 const databaseId = "54687ffc33fb498ab3c8f10c264e5873";
 const weddingDateUrl = `https://api.notion.com/v1/pages`;
 
-interface NotionPostAttendanceProps {
+export interface NotionPostAttendanceProps {
   fullName: string;
   menu: string;
   comment: string;

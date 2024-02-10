@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
-import fetchHome from "../services/fetchHome";
-import bgImage from "../assets/bg.png";
+import { useEffect, useState } from "react";
 import leaf from "../assets/b-leaf.png";
+import fetchHome from "../services/fetchHome";
 
 function Home() {
-  const [image, setImage] = useState([]);
+  const [image, setImage] = useState<string>("");
 
   useEffect(() => {
     const fetchData = async () => {

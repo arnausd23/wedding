@@ -1,11 +1,11 @@
-import React from "react";
+import { ReactElement } from "react";
 
 interface ButtonProps {
   text: string;
-  link: string;
+  link?: string;
   className?: string;
   onClick?: () => void;
-  children: any;
+  children?: ReactElement;
 }
 
 function Button({ text, link, className, onClick, children }: ButtonProps) {

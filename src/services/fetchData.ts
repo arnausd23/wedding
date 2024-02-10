@@ -1,4 +1,4 @@
-export const fetchData = async (url: string, body?: any = {}) => {
+export const fetchData = async (url: string, body: any = {}) => {
   const notionAPIKey = "secret_u57TwLDeX18bsX6GUjfGyEPo1CQFTWkwQoo7iEqZS9I";
   const proxyUrl = "https://corsproxy.io";
 

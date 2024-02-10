@@ -1,6 +1,5 @@
-import React from "react";
-import FlowerIcon from "../components/Icons/FlowerIcon";
 import leaf from "../assets/b-leaf.png";
+import FlowerIcon from "../components/Icons/FlowerIcon";
 
 function JoinUs() {
   return (

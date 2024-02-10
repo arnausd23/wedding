@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "../components/Button";
 import notionPostAttendance from "../services/notionPostAttendance";
 
@@ -7,12 +6,14 @@ function Contact() {
     const form = document.getElementById("contact");
     const inputs = form?.getElementsByTagName("input");
     const selects = form?.getElementsByTagName("select");
-    const data = {};
+    const data: any = {};
 
-    for (let input of inputs) {
+    if (!inputs || !selects) return;
+
+    for (const input of inputs) {
       data[input.id] = input.value;
     }
-    for (let select of selects) {
+    for (const select of selects) {
       data[select.id] = select.value;
     }
 

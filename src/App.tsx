@@ -1,14 +1,13 @@
-import { useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Contact from "./sections/Contact";
+import Gallery from "./sections/Gallery";
+import Home from "./sections/Home";
+import Information from "./sections/Information";
 import JoinUs from "./sections/JoinUs";
-import "./services/fetchData";
 import Timeline from "./sections/Timeline";
 import Timer from "./sections/Timer";
-import Information from "./sections/Information";
-import Gallery from "./sections/Gallery";
-import Contact from "./sections/Contact";
-import Home from "./sections/Home";
+import "./services/fetchData";
 
 function App() {
   return (

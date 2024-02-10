@@ -1,11 +1,18 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import leaf from "../assets/b-leaf.png";
 import rings from "../assets/rings.png";
 import fetchWeddingDate from "../services/fetchWeddingDate";
 
+interface TimeLeft {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
 function Timer() {
-  const [date, setDate] = useState(null);
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [date, setDate] = useState<Date | null>(null);
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,6 +25,7 @@ function Timer() {
         };
       });
 
+      if (!date) return;
       const formattedDate = new Date(date[0].date);
       setDate(formattedDate);
     };
@@ -35,11 +43,13 @@ function Timer() {
     return () => clearTimeout(timer);
   });
 
-  function calculateTimeLeft() {
-    const targetDate = new Date(date);
-    const difference = targetDate - new Date();
+  function calculateTimeLeft(): TimeLeft {
+    if (!date) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
 
-    let timeLeft = {};
+    const targetDate = new Date(date);
+    const difference = +targetDate - +new Date();
+
+    let timeLeft: any = {};
 
     if (difference > 0) {
       timeLeft = {
