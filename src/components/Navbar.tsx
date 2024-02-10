@@ -66,9 +66,9 @@ function Navbar() {
             >
               <img className="w-28" src={logo} alt="website logo" />
             </a>
-            <ul className="bg-slate-100 p-24 lg:hidden flex flex-col items-center justify-center h-full ">
+            <ul className="bg-slate-100 pt-24 lg:hidden flex flex-col items-center justify-center h-full ">
               {navLinks.map((item) => (
-                <li key={item.label} className="my-4">
+                <li key={item.label} className="my-3">
                   <a
                     href={item.href}
                     className="font-montserrat leading-normal text-3xl"
