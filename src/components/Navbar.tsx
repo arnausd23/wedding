@@ -51,7 +51,7 @@ function Navbar() {
 
       {isMenuOpen && (
         <div>
-          <nav className="fixed top-0 right-0 left-0 bottom-0 lg:bottom-auto bg-slate-100">
+          <nav className="fixed z-50 top-0 right-0 left-0 bottom-0 lg:bottom-auto bg-slate-100">
             <div
               className="hidden max-lg:block fixed right-0  px-8 py-4 cursor-pointer"
               onClick={() => {
@@ -66,7 +66,7 @@ function Navbar() {
             >
               <img className="w-28" src={logo} alt="website logo" />
             </a>
-            <ul className=" lg:hidden flex flex-col items-center justify-center h-full ">
+            <ul className="bg-slate-100 p-24 lg:hidden flex flex-col items-center justify-center h-full ">
               {navLinks.map((item) => (
                 <li key={item.label} className="my-4">
                   <a
