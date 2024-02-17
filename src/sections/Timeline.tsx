@@ -23,7 +23,7 @@ function Timeline() {
           image: image.files[0].file.url,
         };
       });
-      console.log(timeline);
+
       setTimeline(timeline);
     };
 
